@@ -3,14 +3,14 @@ I created chat helper because there isn't another plugin as simple as chat helpe
 chat related plugin that exists, is over sized, and over complicated. This plugin bridges
 the gap between necessity, and simplicity.
 
-## Features
-> `Non bypassing Anti curse`
-> `Max chat caps`
-> `Anti chat/command spam`
-> `PlaceholderAPI support`
-> `Custom chat formatting`
+### Features
+- `Non bypassing Anti curse`
+- `Max chat caps`
+- `Anti chat/command spam`
+- `PlaceholderAPI support`
+- `Custom chat formatting`
 
-## Config
+### Config
 This is the default config.yml file. The default anti-curse implementation should work fine
 for most people, but everything can be changed here!
 
