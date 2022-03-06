@@ -1,0 +1,17 @@
+name: ChatHelper
+author: CodePunisher
+version: 1.0
+main: com.codepunisher.chathelper.ChatMain
+
+commands:
+  chathelperreload:
+    description: reloads chathelper config
+    permission: chathelper.admin
+
+permissions:
+  chathelper.bypass:
+    description: bypasses chathelper checks
+    default: op
+  chathelper.admin:
+    description: access to /chathelperreload
+    default: op
