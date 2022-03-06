@@ -10,6 +10,13 @@ the gap between necessity, and simplicity.
 - `PlaceholderAPI support`
 - `Custom chat formatting`
 
+### Commands
+- `chathelperreload` reloads/updates config.yml
+
+### Permissions
+- `chathelper.admin` access to reload command
+- `chathelper.bypass` bypasses every chat restriction
+
 ### Config
 This is the default config.yml file. The default anti-curse implementation should work fine
 for most people, but everything can be changed here!
