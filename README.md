@@ -1,4 +1,4 @@
-# Why ChatHelper?
+# Why ChatHelper? <img align="right" src="https://user-images.githubusercontent.com/70197204/156930187-d81b3ac1-7ed0-4119-931b-f41e1f92fc5c.png" height="200" width="200">
 I created chat helper because there isn't another plugin as simple as chat helper. Every other
 chat related plugin that exists, is over sized, and over complicated. This plugin bridges
 the gap between necessity, and simplicity.
