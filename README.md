@@ -1,5 +1,8 @@
 # ChatHelper
 
+This is the default `config.yml` file. The default anti-curse implementation should work fine
+for most people, but everything can be changed here!
+
 ```yaml
 # Words that aren't allowed
 # to be typed in chat
