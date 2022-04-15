@@ -52,8 +52,15 @@ CommandCooldowns:
 
 # Simple chat formatting
 # has PlaceholderAPI support
+# message is placed after string
+#
 # Disable by ChatFormat: ""
-ChatFormat: "&r%player% &8&l> &f%message%"
+ChatFormat: "&r%player% &8&l> &f"
+
+# Should the plugin function
+# as a global chat through
+# the proton library
+GlobalChat: false
 
 # Disable any of the below by -> ""
 AntiCurseMessage: "&cWarning: Your message contains a bad word!"

@@ -2,6 +2,8 @@ name: ChatHelper
 author: CodePunisher
 version: 1.0
 main: com.codepunisher.chathelper.ChatMain
+softdepend:
+  - Proton
 
 commands:
   chathelperreload:

@@ -1,8 +1,11 @@
 package com.codepunisher.chathelper;
 
 import com.codepunisher.chathelper.commands.ChatHelperReload;
+import com.codepunisher.chathelper.listeners.ChatGlobal;
 import com.codepunisher.chathelper.util.ConfigManager;
 import com.codepunisher.chathelper.util.ListenerManager;
+import me.drepic.proton.common.ProtonManager;
+import me.drepic.proton.common.ProtonProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,9 +21,13 @@ public class ChatMain extends JavaPlugin {
     private boolean placeHolderAPI;
     public boolean isPlaceHolderAPI() { return placeHolderAPI; }
 
+    private ProtonManager manager;
+    public ProtonManager getManager() { return manager; }
+
     @Override
     public void onEnable() {
         chatMain = this;
+        initProton();
         registerConfig();
         registerListeners();
         registerCommand();
@@ -39,6 +46,13 @@ public class ChatMain extends JavaPlugin {
 
     private void registerCommand() {
         Objects.requireNonNull(getCommand("chathelperreload")).setExecutor(new ChatHelperReload());
+    }
+
+    private void initProton() {
+        if (Bukkit.getPluginManager().getPlugin("Proton") != null) {
+            manager = ProtonProvider.get();
+            manager.registerMessageHandlers(new ChatGlobal());
+        }
     }
 
     private void checkForPlaceHolderAPI() {

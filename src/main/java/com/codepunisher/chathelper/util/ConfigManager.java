@@ -18,6 +18,7 @@ public class ConfigManager {
     private int maxCaps;
     private int chatCooldown;
     private boolean assCheck;
+    private boolean globalChat;
     private String chatFormat;
     private String antiCurseMessage;
     private String maxCapsMessage;
@@ -30,6 +31,7 @@ public class ConfigManager {
     public int getMaxCaps() { return maxCaps; }
     public int getChatCooldown() { return chatCooldown; }
     public boolean isAssCheck() { return assCheck; }
+    public boolean isGlobalChat() { return globalChat; }
     public String getChatFormat() { return chatFormat; }
     public String getAntiCurseMessage() { return antiCurseMessage; }
     public String getMaxCapsMessage() { return maxCapsMessage; }
@@ -50,6 +52,7 @@ public class ConfigManager {
         maxCaps = config.getInt("MaxCaps");
         chatCooldown = config.getInt("ChatCooldown");
         assCheck = config.getBoolean("AssCheck");
+        globalChat = config.getBoolean("GlobalChat");
         chatFormat = ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(config.getString("ChatFormat")));
         antiCurseMessage = ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(config.getString("AntiCurseMessage")));
         maxCapsMessage = ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(config.getString("MaxCapsMessage")));

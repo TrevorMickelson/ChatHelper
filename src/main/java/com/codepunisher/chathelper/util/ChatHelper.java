@@ -1,5 +1,7 @@
 package com.codepunisher.chathelper.util;
 
+import com.codepunisher.chathelper.ChatMain;
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.entity.Player;
 
 public class ChatHelper {
@@ -30,5 +32,18 @@ public class ChatHelper {
      */
     public static boolean bypassesEverything(Player player) {
         return player.hasPermission("chathelper.bypass");
+    }
+
+    public static String getFormattedChatMessage(Player player, String msg) {
+        String configFormat = ChatMain.getInstance().getConfigManager().getChatFormat();
+
+        if (configFormat.isEmpty()) return null;
+
+        String officialFormat = (configFormat.replace("%player%", player.getName())) + msg;
+
+        if (ChatMain.getInstance().isPlaceHolderAPI())
+            officialFormat = PlaceholderAPI.setPlaceholders(player, officialFormat);
+
+        return officialFormat;
     }
 }
