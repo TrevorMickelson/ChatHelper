@@ -9,6 +9,7 @@ the gap between necessity, and simplicity.
 - `Anti chat/command spam`
 - `PlaceholderAPI support`
 - `Custom chat formatting`
+- `Redis and RabbitMQ support`
 
 ### Commands
 - `chathelperreload` reloads/updates config.yml
@@ -16,6 +17,9 @@ the gap between necessity, and simplicity.
 ### Permissions
 - `chathelper.admin` access to reload command
 - `chathelper.bypass` bypasses every chat restriction
+
+### Optional dependency
+- `Proton` library used for redis/rabbitmq
 
 ### Config
 This is the default config.yml file. The default anti-curse implementation should work fine
@@ -73,6 +77,11 @@ CommandCooldowns:
   - tell:2
   - whisper:2
   - pay:10
+  
+# Should the plugin function
+# as a global chat through
+# the proton library
+GlobalChat: false
 
 # Simple chat formatting
 # has PlaceholderAPI support
