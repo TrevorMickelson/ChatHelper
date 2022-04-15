@@ -19,7 +19,7 @@ the gap between necessity, and simplicity.
 - `chathelper.bypass` bypasses every chat restriction
 
 ### Optional dependency
-- `Proton` library used for redis/rabbitmq
+- `Proton` library used for redis/rabbitmq https://www.spigotmc.org/resources/proton-cross-server-plugin-messaging.87159/
 
 ### Config
 This is the default config.yml file. The default anti-curse implementation should work fine
