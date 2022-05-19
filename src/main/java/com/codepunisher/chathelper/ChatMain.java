@@ -34,6 +34,11 @@ public class ChatMain extends JavaPlugin {
         checkForPlaceHolderAPI();
     }
 
+    @Override
+    public void onDisable() {
+
+    }
+
     private void registerConfig() {
         saveDefaultConfig();
         configManager = new ConfigManager();

@@ -8,9 +8,9 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 public class ChatCurse {
     private final ConfigManager configManager = ChatMain.getInstance().getConfigManager();
 
-    private void onChat(AsyncPlayerChatEvent event) {
+    private boolean onChat(AsyncPlayerChatEvent event) {
         if (!shouldCheck())
-            return;
+            return false;
 
         if (hasBadWord(event.getMessage())) {
             Player player = event.getPlayer();
@@ -20,7 +20,11 @@ public class ChatCurse {
 
             if (!message.isEmpty())
                 player.sendMessage(message);
+
+            return true;
         }
+
+        return false;
     }
 
     private boolean hasBadWord(String message) {
@@ -76,5 +80,5 @@ public class ChatCurse {
      * easily return in the other method
      * to avoid unnecessary further checks
      */
-    public void handleChatCurse(AsyncPlayerChatEvent event) { onChat(event); }
+    public boolean isCursedChat(AsyncPlayerChatEvent event) { return onChat(event); }
 }

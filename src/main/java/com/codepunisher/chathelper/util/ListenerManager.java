@@ -31,7 +31,8 @@ public class ListenerManager implements Listener {
             if (chatCap.isMaxCaps(event))
                 return;
 
-            chatCurse.handleChatCurse(event);
+            if (chatCurse.isCursedChat(event))
+                return;
         }
 
         // Global chat/formatting
