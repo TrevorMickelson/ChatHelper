@@ -36,18 +36,7 @@ for most people, but everything can be changed here!
 # using symbols or spaces
 #
 # Disable by AntiCurse: []
-AntiCurse:
-  - fuk
-  - fuck
-  - shit
-  - bitch
-  - dick
-  - nigg
-  - puss
-  - cunt
-  - whor
-  - vagina
-  - penis
+AntiCurse: []
 
 # This is if you want the
 # word "ass" to be checked for in chat
